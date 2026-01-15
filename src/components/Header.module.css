@@ -1,0 +1,60 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.apex {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--royal-blue);
+    font-weight: 500;
+}
+
+.nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-main);
+    position: relative;
+}
+
+.link:hover {
+    color: var(--royal-blue);
+}
+
+@media (max-width: 900px) {
+    .nav {
+        display: none;
+    }
+}

@@ -1,0 +1,94 @@
+.results {
+    background: var(--navy);
+    color: white;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.header h2 {
+    color: white;
+}
+
+.label {
+    color: var(--light-blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat {
+    text-align: center;
+}
+
+.num {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--light-blue);
+    line-height: 1;
+    display: block;
+}
+
+.statLabel {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.cases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.caseCard {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.type {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--light-blue);
+}
+
+.caseResult {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    line-height: 1.4;
+}
+
+.client {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 900px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cases {
+        grid-template-columns: 1fr;
+    }
+}
