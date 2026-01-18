@@ -12,7 +12,11 @@ export default function Header() {
         <header className={styles.header}>
             <div className={`container ${styles.container}`}>
                 <Link href="/" className={styles.logo}>
-                    <Image src="/logo.png" alt="APEX Consulting" width={140} height={50} priority />
+                    <Image src="/icon.png" alt="APEX" width={40} height={40} priority />
+                    <div className={styles.brandText}>
+                        <span className={styles.brandName}>APEX</span>
+                        <span className={styles.brandTagline}>Consulting</span>
+                    </div>
                 </Link>
 
                 <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>

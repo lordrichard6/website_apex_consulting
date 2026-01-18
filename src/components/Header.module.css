@@ -17,8 +17,36 @@
     padding: 1rem 2rem;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
 .logo img {
     display: block;
+}
+
+.brandText {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.brandName {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: var(--navy);
+    letter-spacing: -0.02em;
+}
+
+.brandTagline {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--teal);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .nav {
