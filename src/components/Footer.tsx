@@ -9,7 +9,13 @@ export default function Footer() {
             <div className="container">
                 <div className={styles.wrapper}>
                     <div className={styles.brand}>
-                        <Image src="/logo.png" alt="APEX Consulting" width={120} height={40} />
+                        <div className={styles.footerLogo}>
+                            <Image src="/icon.png" alt="APEX" width={48} height={48} />
+                            <div className={styles.footerBrandText}>
+                                <span className={styles.footerBrandName}>APEX</span>
+                                <span className={styles.footerBrandTagline}>Consulting</span>
+                            </div>
+                        </div>
                         <p>Transforming businesses through strategic insight and operational excellence.</p>
                         <div className={styles.social}>
                             <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>

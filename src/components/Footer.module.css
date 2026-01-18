@@ -12,6 +12,35 @@
     border-bottom: 1px solid rgba(107, 154, 169, 0.2);
 }
 
+.footerLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.footerBrandText {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.footerBrandName {
+    font-size: 1.75rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+.footerBrandTagline {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--light-blue);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
 .brand p {
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.7;
