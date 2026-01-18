@@ -1,25 +1,39 @@
+'use client';
+import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Header.module.css';
+import { Menu, X } from 'lucide-react';
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <header className={styles.header}>
             <div className={`container ${styles.container}`}>
                 <Link href="/" className={styles.logo}>
-                    <span className={styles.apex}>APEX</span>
-                    <span className={styles.tagline}>CONSULTING</span>
+                    <Image src="/logo.png" alt="APEX Consulting" width={140} height={50} priority />
                 </Link>
 
-                <nav className={styles.nav}>
-                    <Link href="#services" className={styles.link}>Services</Link>
-                    <Link href="#results" className={styles.link}>Results</Link>
-                    <Link href="#about" className={styles.link}>About</Link>
-                    <Link href="#insights" className={styles.link}>Insights</Link>
+                <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
+                    <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
+                    <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
+                    <Link href="/#services" onClick={() => setIsOpen(false)}>Services</Link>
+                    <Link href="/insights" onClick={() => setIsOpen(false)}>Insights</Link>
+                    <Link href="/#contact" onClick={() => setIsOpen(false)}>Contact</Link>
                 </nav>
 
-                <Link href="#contact" className="btn btn-primary">
+                <a href="#contact" className={`btn btn-primary ${styles.cta}`}>
                     Get Started
-                </Link>
+                </a>
+
+                <button
+                    className={styles.hamburger}
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-label="Toggle menu"
+                >
+                    {isOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
             </div>
         </header>
     );

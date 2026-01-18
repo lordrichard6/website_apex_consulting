@@ -1,0 +1,52 @@
+.hero {
+    background: var(--cream);
+    padding: 6rem 0 4rem;
+    border-bottom: 2px solid var(--navy);
+}
+
+.hero h1 {
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    color: var(--light-blue);
+    font-size: 0.9rem;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--navy);
+    font-size: 1.5rem;
+}
+
+.content p {
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.content ul {
+    margin: 1rem 0 1.5rem 2rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.content a {
+    color: var(--teal);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.content a:hover {
+    color: var(--navy);
+}

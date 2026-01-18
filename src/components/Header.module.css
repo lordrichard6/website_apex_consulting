@@ -1,60 +1,104 @@
 .header {
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 100;
-    padding: 1rem 0;
+    left: 0;
+    right: 0;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(26, 58, 82, 0.1);
+    z-index: 1000;
+    transition: all var(--transition-base);
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
 }
 
-.logo {
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-}
-
-.apex {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--navy);
-    letter-spacing: 2px;
-}
-
-.tagline {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: var(--royal-blue);
-    font-weight: 500;
+.logo img {
+    display: block;
 }
 
 .nav {
     display: flex;
     gap: 2.5rem;
+    align-items: center;
 }
 
-.link {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-main);
+.nav a {
+    font-weight: 600;
+    color: var(--navy);
     position: relative;
+    transition: color var(--transition-fast);
 }
 
-.link:hover {
-    color: var(--royal-blue);
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--teal);
+    transition: width var(--transition-base);
+}
+
+.nav a:hover {
+    color: var(--teal);
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.cta {
+    margin-left: 1rem;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--navy);
 }
 
 @media (max-width: 900px) {
     .nav {
+        position: fixed;
+        top: 73px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        padding: 2rem;
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all var(--transition-base);
+    }
+
+    .nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav a {
+        width: 100%;
+        padding: 1rem;
+        border-bottom: 1px solid var(--cream);
+    }
+
+    .cta {
         display: none;
+    }
+
+    .hamburger {
+        display: block;
     }
 }

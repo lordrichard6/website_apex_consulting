@@ -1,0 +1,149 @@
+.hero {
+    background: var(--navy);
+    color: white;
+    padding: 8rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    color: var(--light-blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+.story {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story h2 {
+    margin-bottom: 2rem;
+}
+
+.story p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--light-blue);
+    margin-bottom: 1.5rem;
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.valueCard {
+    text-align: center;
+}
+
+.valueIcon {
+    width: 64px;
+    height: 64px;
+    background: var(--gradient-accent);
+    color: white;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.valueCard h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.valueCard p {
+    color: var(--light-blue);
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.memberCard {
+    text-align: center;
+    padding: 2rem;
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.memberCard:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.memberAvatar {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.memberCard h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    color: var(--teal);
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.memberCard p {
+    color: var(--light-blue);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .valuesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .teamGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .valuesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .teamGrid {
+        grid-template-columns: 1fr;
+    }
+}
