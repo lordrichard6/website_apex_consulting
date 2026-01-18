@@ -1,10 +1,12 @@
+'use client';
 import styles from './Results.module.css';
+import AnimatedCounter from './AnimatedCounter';
 
 const stats = [
-    { num: "$2.4B+", label: "Value Created" },
-    { num: "200+", label: "Clients Served" },
-    { num: "98%", label: "Client Retention" },
-    { num: "15+", label: "Industries" },
+    { num: 2400000000, suffix: "+", prefix: "$", label: "Value Created" },
+    { num: 200, suffix: "+", label: "Clients Served" },
+    { num: 98, suffix: "%", label: "Client Retention" },
+    { num: 15, suffix: "+", label: "Industries" },
 ];
 
 const cases = [
@@ -16,16 +18,23 @@ const cases = [
 export default function Results() {
     return (
         <section id="results" className={`section-padding ${styles.results}`}>
+            <div className="pattern-dots" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}></div>
             <div className="container">
                 <div className={styles.header}>
                     <span className={styles.label}>Proven Impact</span>
-                    <h2>Results That <span className="text-blue">Speak</span></h2>
+                    <h2>Results That <span className="text-teal">Matter</span></h2>
                 </div>
 
                 <div className={styles.stats}>
                     {stats.map((s, i) => (
                         <div key={i} className={styles.stat}>
-                            <span className={styles.num}>{s.num}</span>
+                            <span className={styles.num}>
+                                <AnimatedCounter
+                                    end={s.num}
+                                    prefix={s.prefix || ''}
+                                    suffix={s.suffix || ''}
+                                />
+                            </span>
                             <span className={styles.statLabel}>{s.label}</span>
                         </div>
                     ))}

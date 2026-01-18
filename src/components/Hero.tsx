@@ -1,15 +1,17 @@
+'use client';
 import Image from 'next/image';
 import styles from './Hero.module.css';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, PlayCircle } from 'lucide-react';
 
 export default function Hero() {
     return (
         <section className={styles.hero}>
+            <div className="pattern-grid" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}></div>
             <div className={`container ${styles.container}`}>
                 <div className={styles.content}>
                     <div className={styles.badge}>Strategy & Growth Partners</div>
                     <h1 className={styles.title}>
-                        Unlock Your Business <span className="text-blue">Potential</span>
+                        Unlock Your Business <span className="text-teal">Potential</span>
                     </h1>
                     <p className={styles.desc}>
                         We partner with ambitious leaders to solve complex challenges,
@@ -17,9 +19,11 @@ export default function Hero() {
                     </p>
                     <div className={styles.actions}>
                         <a href="#contact" className="btn btn-primary">
-                            Schedule a Call <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
+                            Schedule a Call <ArrowRight size={18} />
                         </a>
-                        <a href="#results" className={styles.secondaryLink}>View Our Results</a>
+                        <a href="#results" className="btn btn-outline">
+                            <PlayCircle size={18} /> View Results
+                        </a>
                     </div>
 
                     <div className={styles.clients}>
@@ -43,6 +47,7 @@ export default function Hero() {
                         className={styles.image}
                         priority
                     />
+                    <div className={styles.imageGlow}></div>
                 </div>
             </div>
         </section>
